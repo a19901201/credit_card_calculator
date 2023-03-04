@@ -2,6 +2,22 @@
 <html>
 <head>
   <title>信用卡回饋計算機</title>
+  <style>
+    body {
+      text-align: center;
+    }
+    input[type="number"] {
+      width: 50%;
+      text-align: center;
+      margin: 0 auto;
+      display: block;
+    }
+    button {
+      width: 30%;
+      margin: 0 auto;
+      display: block;
+    }
+  </style>
 </head>
 <body>
   <h1>信用卡回饋計算機</h1>
@@ -14,13 +30,11 @@
   <br><br>
   <p>回饋金額：</p>
   <input type="number" id="rewardsAmount" readonly>
-  
   <script>
     const calculateButton = document.getElementById("calculateButton");
     const amountSpent = document.getElementById("amountSpent");
     const rewardsPercentage = document.getElementById("rewardsPercentage");
     const rewardsAmount = document.getElementById("rewardsAmount");
-    
     calculateButton.addEventListener("click", function() {
       rewardsAmount.value = (amountSpent.value * rewardsPercentage.value) / 100;
     });
