@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>信用卡回饋計算機</title>
+</head>
+<body>
+  <h1>信用卡回饋計算機</h1>
+  <p>輸入您的信用卡消費金額：</p>
+  <input type="number" id="amountSpent">
+  <p>輸入回饋百分比：</p>
+  <input type="number" id="rewardsPercentage">
+  <br><br>
+  <button id="calculateButton">計算回饋</button>
+  <br><br>
+  <p>回饋金額：</p>
+  <input type="number" id="rewardsAmount" readonly>
+  
+  <script>
+    const calculateButton = document.getElementById("calculateButton");
+    const amountSpent = document.getElementById("amountSpent");
+    const rewardsPercentage = document.getElementById("rewardsPercentage");
+    const rewardsAmount = document.getElementById("rewardsAmount");
+    
+    calculateButton.addEventListener("click", function() {
+      rewardsAmount.value = (amountSpent.value * rewardsPercentage.value) / 100;
+    });
+  </script>
+</body>
+</html>
